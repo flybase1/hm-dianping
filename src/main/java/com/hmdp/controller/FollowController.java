@@ -22,8 +22,9 @@ public class FollowController {
     private IFollowService followService;
 
     /**
-     *是否跟随当前使用者
-     * @param id  关注者的id
+     * 是否跟随当前使用者
+     *
+     * @param id       关注者的id
      * @param isFollow 是否关注
      * @return
      */
@@ -34,6 +35,7 @@ public class FollowController {
 
     /**
      * 判断是否关注了作者
+     *
      * @param id 作者id
      * @return
      */
@@ -44,11 +46,12 @@ public class FollowController {
 
     /**
      * 虎丘共同关注
+     *
      * @param followUserId
      * @return
      */
-    @GetMapping("/common/{id}")
-    private Result followCommonUsers(@PathVariable("id")Long followUserId){
+    @GetMapping( "/common/{id}" )
+    private Result followCommonUsers(@PathVariable( "id" ) Long followUserId) {
         return followService.followCommonUsers(followUserId);
     }
 
